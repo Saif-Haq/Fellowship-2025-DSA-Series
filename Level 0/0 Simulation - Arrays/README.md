@@ -19,3 +19,22 @@
 - Don’t spend more than 30–40 minutes on a single problem.  
 - If you’re stuck on a problem, search on YouTube using the problem number.  
 - Try to solve a problem in multiple ways.
+
+
+
+Notes
+(1)
+
+Used a nested loop to calculate the sum from scratch for each index.
+Was not accumulating the sum inside the inner loop.
+
+Misusing push with brackets: output.push[s].
+
+Improved Version (O(n) approach):
+You correctly introduced a variable lastsum to carry the previously computed sum.
+You pushed the new sum into the result array — ✔️ nice.
+But you forgot to update lastsum, so the same value kept being added repeatedly.
+
+Final Fix:
+Realized you needed to do: lastsum = newSum; after pushing the value.
+With that one line, your logic became fully correct and efficient.
